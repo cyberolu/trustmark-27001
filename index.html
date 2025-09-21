@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TrustMark 27001 — Compliance made simple</title>
+  <meta name="description" content="TrustMark 27001 helps organisations in the UK get and stay audit-ready with clear controls, policies, and evidence. Simple, fast, and affordable.">
+  <meta name="robots" content="index,follow">
+  <link rel="icon" href="favicon-32x32.png">
+  <meta property="og:title" content="TrustMark 27001">
+  <meta property="og:description" content="Compliance made simple. ISO 27001, Cyber Essentials, GDPR readiness.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://example.com/">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <!-- Left: brand + trust pill stacked -->
+      <div class="brand-wrap">
+        <a class="brand" href="#home" aria-label="TrustMark 27001 home">
+          <img src="logo/logo.svg" alt="TrustMark 27001 logo" class="logo">
+          <span>TrustMark 27001</span>
+        </a>
+        <div class="subheader">
+          <span class="pill">ISO 27001 • Cyber Essentials • GDPR</span>
+        </div>
+      </div>
+
+      <!-- Right: navigation -->
+      <ul>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#process">Process</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a class="btn ghost" href="#contact">Get a quote</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main id="home" class="container">
+    <section class="hero">
+      <h1>Be audit-ready, always.</h1>
+      <p>We help UK organisations implement practical controls, gather evidence, and pass audits without the chaos. From gap assessment to tidy documentation — simple, transparent, and fast.</p>
+      <div style="display:flex;gap:.8rem;flex-wrap:wrap">
+        <a class="btn primary" href="#contact">Book a free consult</a>
+        <a class="btn" href="#pricing">See pricing</a>
+      </div>
+    </section>
+
+    <section id="services">
+      <h2 class="section-title">Our Services</h2>
+      <div class="grid cols-2">
+        <article class="card">
+          <h3>Gap Analysis</h3>
+          <p class="muted">An entry-level review that shows where your organisation stands against key compliance standards and highlights immediate actions.</p>
+        </article>
+        <article class="card">
+          <h3>Risk Assessment</h3>
+          <p class="muted">Structured assessment of security risks, with clear prioritisation to reduce threats and satisfy auditors. Perfect as a first step.</p>
+        </article>
+        <article class="card">
+          <h3>Standard – Policies & Risk</h3>
+          <p class="muted">Mid-tier package providing tailored policies, risk registers, and controls documentation to align with ISO 27001 and Cyber Essentials.</p>
+        </article>
+        <article class="card">
+          <h3>Pro – Compliance Support</h3>
+          <p class="muted">Premium retainer service with ongoing support, evidence collection, auditor liaison, and compliance updates to keep you audit-ready year-round.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="process">
+      <h2 class="section-title">Our simple process</h2>
+      <div class="grid cols-3">
+        <div class="card step">
+          <span class="num">1</span>
+          <div>
+            <h3>Discovery call</h3>
+            <p class="muted">15–30 minutes to understand your scope, timelines, and targets.</p>
+          </div>
+        </div>
+
+        <div class="card step">
+          <span class="num">2</span>
+          <div>
+            <h3>Plan &amp; prepare</h3>
+            <p class="muted">Gap analysis and risk assessment lead to a clear, prioritised roadmap.</p>
+          </div>
+        </div>
+
+        <div class="card step">
+          <span class="num">3</span>
+          <div>
+            <h3>Implement &amp; support</h3>
+            <p class="muted">Policies, controls, and evidence packs — plus ongoing compliance support if you choose Pro.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="pricing">
+      <h2 class="section-title">Pricing</h2>
+      <div class="grid cols-2 pricing">
+        <article class="card">
+          <h3>Gap Analysis</h3>
+          <p class="muted">Entry-level review for SMEs who want a quick compliance snapshot.</p>
+          <p class="price">£399 <small>+ VAT</small></p>
+          <a class="btn" href="#contact">Enquire</a>
+        </article>
+        <article class="card">
+          <h3>Risk Assessment</h3>
+          <p class="muted">In-depth analysis of risks, threats, and controls with prioritised actions.</p>
+          <p class="price">£699 <small>+ VAT</small></p>
+          <a class="btn" href="#contact">Enquire</a>
+        </article>
+        <article class="card recommended">
+          <h3>Standard – Policies & Risk</h3>
+          <p class="muted">Tailored policy pack, risk register, and documentation for audit readiness.</p>
+          <p class="price">£1,499 <small>+ VAT</small></p>
+          <a class="btn primary" href="#contact">Get started</a>
+        </article>
+        <article class="card">
+          <h3>Pro – Compliance Support</h3>
+          <p class="muted">Ongoing compliance support, evidence management, and audit liaison.</p>
+          <p class="price">Custom retainer</p>
+          <a class="btn" href="#contact">Book a call</a>
+        </article>
+      </div>
+      <p class="notice">We use secure payment links (Stripe/PayPal). No card details are handled on this site.</p>
+    </section>
+
+    <section id="contact">
+  <h2 class="section-title">Contact us</h2>
+
+  <!-- Netlify-ready, accessible form -->
+  <!-- After submission, users will be redirected to thank-you.html -->
+  <form
+    name="contact"
+    method="POST"
+    data-netlify="true"
+    data-netlify-honeypot="bot-field"
+    action="/thank-you.html"
+  >
+    <input type="hidden" name="form-name" value="contact">
+
+    <!-- Honeypot (hidden from users) -->
+    <p style="display:none;">
+      <label for="bot-field">Don’t fill this out if you’re human:</label>
+      <input id="bot-field" name="bot-field" autocomplete="off">
+    </p>
+
+    <div class="two-col">
+      <p>
+        <label for="first_name">First name</label><br>
+        <input id="first_name" name="first_name" autocomplete="given-name" required>
+      </p>
+      <p>
+        <label for="last_name">Last name</label><br>
+        <input id="last_name" name="last_name" autocomplete="family-name" required>
+      </p>
+    </div>
+
+    <p>
+      <label for="email">Work email</label><br>
+      <input id="email" type="email" name="email" autocomplete="email" required>
+    </p>
+
+    <p>
+      <label for="company">Company</label><br>
+      <input id="company" name="company" autocomplete="organization">
+    </p>
+
+    <p>
+      <label for="message">What do you need help with?</label><br>
+      <textarea id="message" name="message" rows="5" placeholder="e.g. Gap analysis for SME, aiming for Cyber Essentials by Q4" required></textarea>
+    </p>
+
+    <!-- Optional Netlify reCAPTCHA -->
+    <!-- <div data-netlify-recaptcha="true"></div> -->
+
+    <div style="display:flex;gap:.8rem;align-items:center;flex-wrap:wrap">
+      <button class="btn primary" type="submit">Send message</button>
+      <span class="muted">We’ll reply within one business day.</span>
+    </div>
+  </form>
+</section>
+
+  </main>
+
+  <footer>
+    <div class="container" style="display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap">
+      <div>
+        © 2025 TrustMark 27001 Ltd. UK-based. All rights reserved.
+        <p style="margin-top:.5rem;">
+          <a href="https://jigsaw.w3.org/css-validator/check/referer" rel="noopener">
+            <img class="validator-badge"
+                 src="https://jigsaw.w3.org/css-validator/images/vcss"
+                 alt="Valid CSS!">
+          </a>
+        </p>
+      </div>
+      <div class="badges">
+        <span class="pill">UK-focused</span>
+        <span class="pill">Fixed-fee projects</span>
+        <span class="pill">NDA on request</span>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
