@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cyber Essentials Readiness Check | TrustMark 27001</title>
+  <meta name="description" content="Find out if your organisation is ready for Cyber Essentials with our free readiness check. Get clear next steps in minutes.">
+  <meta name="robots" content="index,follow">
+  <link rel="icon" href="favicon-32x32.png">
+  <meta property="og:title" content="Cyber Essentials Readiness Check | TrustMark 27001">
+  <meta property="og:description" content="Find out if your organisation is ready for Cyber Essentials in minutes with our free readiness check.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://trustmark27001.co.uk/cyber-essentials.html">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand-wrap">
+        <a class="brand" href="index.html" aria-label="TrustMark 27001 home">
+          <img src="logo/logo.svg" alt="TrustMark 27001 logo" class="logo">
+          <span>TrustMark 27001</span>
+        </a>
+        <div class="subheader">
+          <span class="pill">ISO 27001 • Cyber Essentials • GDPR</span>
+        </div>
+      </div>
+
+      <ul>
+        <li><a href="index.html#services">Services</a></li>
+        <li><a href="cyber-essentials.html">Cyber Essentials</a></li>
+        <li><a href="index.html#process">Process</a></li>
+        <li><a href="index.html#pricing">Pricing</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+        <li><a class="btn ghost" href="#lead-form">Get help</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h1>Will You Pass Cyber Essentials?</h1>
+      <p>
+        Find out in 3 minutes with our free readiness check.
+        Instant assessment, clear next steps, and no jargon.
+      </p>
+      <p style="margin-top:1rem;font-weight:600;">
+        ✔ Ideal for tenders, renewals, and supplier security reviews
+      </p>
+
+      <div style="display:flex;gap:.8rem;flex-wrap:wrap">
+        <a class="btn primary" href="#checker">Start the Free Check</a>
+        <a class="btn" href="#lead-form">Get a remediation plan</a>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="section-title">Why use this checker?</h2>
+      <div class="card">
+        <p>
+          Cyber Essentials is required for many UK contracts and supplier assessments.
+          Many organisations fail for simple reasons that can be fixed early.
+        </p>
+        <p style="margin-top:1rem;">
+          This free checker helps you understand:
+        </p>
+        <ul>
+          <li>✔ What you already meet</li>
+          <li>✔ What you are missing</li>
+          <li>✔ How close you are to passing</li>
+          <li>✔ What to fix before submission</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="checker">
+      <h2 class="section-title">Free Cyber Essentials Readiness Check</h2>
+      <div class="card">
+        <iframe
+          src="https://check.trustmark27001.co.uk/"
+          title="Cyber Essentials Readiness Checker"
+          width="100%"
+          height="800"
+          style="border:0;border-radius:12px;">
+        </iframe>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="section-title">Why businesses choose TrustMark 27001</h2>
+      <div class="grid cols-3">
+        <article class="card">
+          <h3>UK-focused support</h3>
+          <p class="muted">Practical guidance designed for UK SMEs working towards compliance and certification.</p>
+        </article>
+
+        <article class="card">
+          <h3>Built by security professionals</h3>
+          <p class="muted">Clear advice grounded in real compliance, risk, and audit preparation work.</p>
+        </article>
+
+        <article class="card">
+          <h3>Simple next steps</h3>
+          <p class="muted">No fluff. Just focused actions to help you move towards certification with confidence.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="lead-form">
+      <h2 class="section-title">Want help fixing the gaps?</h2>
+
+      <div class="card">
+        <p style="margin-bottom:1rem;">
+          Get a free Cyber Essentials remediation plan and we will show you what to do next.
+        </p>
+
+        <form
+          name="cyber-essentials-remediation"
+          method="POST"
+          netlify
+          netlify-honeypot="bot-field"
+          action="/thank-you.html"
+        >
+          <input type="hidden" name="form-name" value="cyber-essentials-remediation">
+
+          <p style="display:none;">
+            <label for="bot-field">Don’t fill this out if you’re human:</label>
+            <input id="bot-field" name="bot-field" autocomplete="off">
+          </p>
+
+          <div class="two-col">
+            <p>
+              <label for="first_name">First name</label><br>
+              <input id="first_name" name="first_name" autocomplete="given-name" required>
+            </p>
+            <p>
+              <label for="last_name">Last name</label><br>
+              <input id="last_name" name="last_name" autocomplete="family-name" required>
+            </p>
+          </div>
+
+          <p>
+            <label for="email">Work email</label><br>
+            <input id="email" type="email" name="email" autocomplete="email" required>
+          </p>
+
+          <p>
+            <label for="company">Company</label><br>
+            <input id="company" name="company" autocomplete="organization">
+          </p>
+
+          <p>
+            <label for="message">What do you need help with?</label><br>
+            <textarea id="message" name="message" rows="5" placeholder="e.g. We want to pass Cyber Essentials this quarter and need help fixing our gaps" required></textarea>
+          </p>
+
+          <div style="display:flex;gap:.8rem;align-items:center;flex-wrap:wrap">
+            <button class="btn primary" type="submit">Get my free remediation plan</button>
+            <span class="muted">We’ll reply within one business day.</span>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="section-title">Frequently asked questions</h2>
+
+      <div class="grid cols-2">
+        <article class="card">
+          <h3>How long does Cyber Essentials take?</h3>
+          <p class="muted">That depends on your current controls. Many businesses can prepare quickly once the gaps are clear.</p>
+        </article>
+
+        <article class="card">
+          <h3>What does the assessment cover?</h3>
+          <p class="muted">It focuses on key areas such as firewalls, secure configuration, access control, malware protection, and software updates.</p>
+        </article>
+
+        <article class="card">
+          <h3>What happens if I fail?</h3>
+          <p class="muted">You can fix the issues identified, improve your controls, and prepare properly before formal submission.</p>
+        </article>
+
+        <article class="card">
+          <h3>Do I need Cyber Essentials Plus?</h3>
+          <p class="muted">That depends on your contract requirements and customer expectations. We can help you decide.</p>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <div class="card" style="text-align:center;">
+        <h2>Start your free Cyber Essentials check</h2>
+        <p style="margin:1rem 0;">
+          Get a quick view of your readiness and find the gaps before they become a problem.
+        </p>
+        <a class="btn primary" href="#checker">Start the free check</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container" style="display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap">
+      <div>
+        © 2025 TrustMark 27001 Ltd. UK-based. All rights reserved.
+      </div>
+      <div class="badges">
+        <span class="pill">UK-focused</span>
+        <span class="pill">Fixed-fee projects</span>
+        <span class="pill">NDA on request</span>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
