@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Report Incident | NDTC 2026</title>
+  <link rel="stylesheet" href="../../shared/css/safeguarding.css">
+</head>
+
+<body>
+
+<main class="qr-portal">
+
+  <section class="qr-hero">
+    <p class="portal-label">TrustMark 27001 Safeguarding Portal</p>
+    <h1>Report Incident</h1>
+    <p>Use this form for injuries, health and safety issues, behaviour concerns, equipment faults or event incidents.</p>
+  </section>
+
+  <section class="emergency-banner">
+    <h2>Emergency?</h2>
+    <p>If someone is in immediate danger call <strong>999</strong> first.</p>
+  </section>
+
+  <form id="incidentForm" class="safeguarding-form">
+    <input type="hidden" id="eventId" value="ndtc2026">
+    <input type="hidden" id="referenceNumber">
+    <input type="hidden" id="submittedAt">
+
+    <h2>Reporter Details</h2>
+
+    <label for="reporterName">Your Name</label>
+    <input type="text" id="reporterName" name="reporterName" required>
+
+    <label for="reporterRole">Your Role</label>
+    <select id="reporterRole" name="reporterRole" required>
+      <option value="">Select role</option>
+      <option value="Volunteer">Volunteer</option>
+      <option value="Coach">Coach</option>
+      <option value="Parent or Guardian">Parent or Guardian</option>
+      <option value="Medical Team">Medical Team</option>
+      <option value="Media Team">Media Team</option>
+      <option value="Event Staff">Event Staff</option>
+      <option value="Spectator">Spectator</option>
+      <option value="Other">Other</option>
+    </select>
+
+    <label for="phone">Contact Number</label>
+    <input type="tel" id="phone" name="phone" required>
+
+    <h2>Incident Details</h2>
+
+    <label for="incidentType">Type of Incident</label>
+    <select id="incidentType" name="incidentType" required>
+      <option value="">Select incident type</option>
+      <option value="Injury">Injury</option>
+      <option value="Health and Safety">Health and Safety</option>
+      <option value="Equipment Failure">Equipment Failure</option>
+      <option value="Behaviour Issue">Behaviour Issue</option>
+      <option value="Venue Issue">Venue Issue</option>
+      <option value="Security Issue">Security Issue</option>
+      <option value="Medical Incident">Medical Incident</option>
+      <option value="Operational Issue">Operational Issue</option>
+      <option value="Other">Other</option>
+    </select>
+
+    <label for="location">Location of Incident</label>
+    <input type="text" id="location" name="location" placeholder="Example: main hall, football area, registration desk" required>
+
+    <label for="personsInvolved">Person(s) Involved</label>
+    <input type="text" id="personsInvolved" name="personsInvolved" placeholder="Name(s) if known">
+
+    <label for="incidentDate">Date of Incident</label>
+    <input type="date" id="incidentDate" name="incidentDate" required>
+
+    <label for="incidentTime">Time of Incident</label>
+    <input type="time" id="incidentTime" name="incidentTime" required>
+
+    <label for="description">What happened?</label>
+    <textarea id="description" name="description" rows="7" placeholder="Please record facts only. What happened, where, when and who was involved?" required></textarea>
+
+    <label for="actionTaken">Action Taken</label>
+    <textarea id="actionTaken" name="actionTaken" rows="5" placeholder="Example: first aid provided, area made safe, safeguarding lead informed"></textarea>
+
+    <label for="severity">Incident Severity</label>
+    <select id="severity" name="severity" required>
+      <option value="">Select severity</option>
+      <option value="Low">Low</option>
+      <option value="Medium">Medium</option>
+      <option value="High">High</option>
+      <option value="Critical">Critical</option>
+    </select>
+
+    <label for="immediateEmergency">Is this an immediate emergency?</label>
+    <select id="immediateEmergency" name="immediateEmergency" required>
+      <option value="">Select answer</option>
+      <option value="Yes">Yes</option>
+      <option value="No">No</option>
+      <option value="Not Sure">Not Sure</option>
+    </select>
+
+    <div id="successMessage" class="success-message" style="display:none;">
+      Incident report submitted successfully.
+    </div>
+
+    <button id="submitIncidentBtn" type="submit" class="submit-btn">Submit Incident Report</button>
+
+    <p class="form-note">
+      This form will be sent to the Event Safeguarding Lead. If there is immediate danger, call 999 first.
+    </p>
+
+  </form>
+
+  <footer class="portal-footer">
+    <p><a href="index.html">Back to Safeguarding Portal</a></p>
+    <p>Managed by TrustMark 27001</p>
+  </footer>
+
+</main>
+
+</body>
+</html>

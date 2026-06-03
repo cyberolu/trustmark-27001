@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Missing Child Alert | NDTC 2026</title>
+  <link rel="stylesheet" href="../../shared/css/safeguarding.css">
+</head>
+
+<body>
+
+<main class="qr-portal">
+
+  <section class="missing-hero">
+    <p class="portal-label">TrustMark 27001 Safeguarding Portal</p>
+    <h1>Missing Child Alert</h1>
+    <p>Use this form immediately if a child is missing or separated from their parent, coach or guardian.</p>
+  </section>
+
+  <section class="critical-banner">
+    <h2>Immediate Action Required</h2>
+    <p>Notify the Safeguarding Lead and Command Centre immediately. If the child may be in danger, call <strong>999</strong>.</p>
+  </section>
+
+  <form id="missingChildForm" class="safeguarding-form emergency-form">
+    <input type="hidden" id="eventId" value="ndtc2026">
+    <input type="hidden" id="referenceNumber">
+    <input type="hidden" id="submittedAt">
+
+    <h2>Reporter Details</h2>
+
+    <label for="reporterName">Your Name</label>
+    <input type="text" id="reporterName" name="reporterName" required>
+
+    <label for="phone">Your Mobile Number</label>
+    <input type="tel" id="phone" name="phone" required>
+
+    <h2>Child Details</h2>
+
+    <label for="childName">Child Name</label>
+    <input type="text" id="childName" name="childName" placeholder="Name if known" required>
+
+    <label for="childAge">Approximate Age</label>
+    <input type="number" id="childAge" name="childAge" min="1" max="18" required>
+
+    <label for="gender">Gender</label>
+    <select id="gender" name="gender" required>
+      <option value="">Select option</option>
+      <option value="Female">Female</option>
+      <option value="Male">Male</option>
+      <option value="Prefer not to say">Prefer not to say</option>
+      <option value="Unknown">Unknown</option>
+    </select>
+
+    <label for="clothing">Clothing Description</label>
+    <textarea id="clothing" name="clothing" rows="4" placeholder="Example: green tracksuit, white trainers, event wristband" required></textarea>
+
+    <label for="features">Distinguishing Features</label>
+    <textarea id="features" name="features" rows="4" placeholder="Example: hairstyle, glasses, height, bag, injury, medical alert"></textarea>
+
+    <h2>Last Seen Information</h2>
+
+    <label for="lastSeenLocation">Last Seen Location</label>
+    <input type="text" id="lastSeenLocation" name="lastSeenLocation" placeholder="Example: main hall, football area, toilets, registration desk" required>
+
+    <label for="lastSeenTime">Time Last Seen</label>
+    <input type="time" id="lastSeenTime" name="lastSeenTime" required>
+
+    <label for="responsibleAdult">Parent, Guardian or Responsible Adult</label>
+    <input type="text" id="responsibleAdult" name="responsibleAdult" placeholder="Name if known">
+
+    <label for="adultContact">Responsible Adult Contact Number</label>
+    <input type="tel" id="adultContact" name="adultContact" placeholder="If known">
+
+    <label for="medicalRisk">Any medical or immediate risk?</label>
+    <select id="medicalRisk" name="medicalRisk" required>
+      <option value="">Select answer</option>
+      <option value="Yes">Yes</option>
+      <option value="No">No</option>
+      <option value="Not Sure">Not Sure</option>
+    </select>
+
+    <label for="additionalInfo">Additional Information</label>
+    <textarea id="additionalInfo" name="additionalInfo" rows="5" placeholder="Any other information that may help locate the child"></textarea>
+
+    <div id="successMessage" class="success-message" style="display:none;">
+      Missing child alert submitted successfully.
+    </div>
+
+    <button id="submitMissingChildBtn" type="submit" class="submit-btn danger-btn">
+      Submit Missing Child Alert
+    </button>
+
+    <p class="form-note">
+      This alert must also be reported verbally to the Safeguarding Lead or Command Centre immediately.
+    </p>
+
+  </form>
+
+  <footer class="portal-footer">
+    <p><a href="index.html">Back to Safeguarding Portal</a></p>
+    <p>Managed by TrustMark 27001</p>
+  </footer>
+
+</main>
+
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Report Safeguarding Concern | NDTC 2026</title>
+  <link rel="stylesheet" href="../../shared/css/safeguarding.css">
+</head>
+
+<body>
+
+<main class="qr-portal">
+
+  <section class="qr-hero">
+    <p class="portal-label">TrustMark 27001 Safeguarding Portal</p>
+    <h1>Report Safeguarding Concern</h1>
+    <p>Use this form for welfare, bullying, discrimination, inappropriate behaviour or safeguarding concerns.</p>
+  </section>
+
+  <section class="emergency-banner">
+    <h2>Emergency?</h2>
+    <p>If someone is in immediate danger call <strong>999</strong> first.</p>
+  </section>
+
+  <form id="concernForm" class="safeguarding-form">
+    <input type="hidden" id="eventId" value="ndtc2026">
+    <input type="hidden" id="referenceNumber">
+    <input type="hidden" id="submittedAt">
+
+    <h2>Reporter Details</h2>
+
+    <label for="reporterName">Your Name</label>
+    <input type="text" id="reporterName" name="reporterName" required>
+
+    <label for="reporterRole">Your Role</label>
+    <select id="reporterRole" name="reporterRole" required>
+      <option value="">Select role</option>
+      <option value="Volunteer">Volunteer</option>
+      <option value="Coach">Coach</option>
+      <option value="Parent or Guardian">Parent or Guardian</option>
+      <option value="Medical Team">Medical Team</option>
+      <option value="Media Team">Media Team</option>
+      <option value="Event Staff">Event Staff</option>
+      <option value="Spectator">Spectator</option>
+      <option value="Other">Other</option>
+    </select>
+
+    <label for="phone">Contact Number</label>
+    <input type="tel" id="phone" name="phone" required>
+
+    <h2>Concern Details</h2>
+
+    <label for="concernType">Type of Concern</label>
+    <select id="concernType" name="concernType" required>
+      <option value="">Select concern type</option>
+      <option value="Welfare Concern">Welfare Concern</option>
+      <option value="Bullying">Bullying</option>
+      <option value="Discrimination">Discrimination</option>
+      <option value="Inappropriate Adult Behaviour">Inappropriate Adult Behaviour</option>
+      <option value="Photography or Social Media Concern">Photography or Social Media Concern</option>
+      <option value="Safeguarding Concern">Safeguarding Concern</option>
+      <option value="Other">Other</option>
+    </select>
+
+    <label for="location">Location of Concern</label>
+    <input type="text" id="location" name="location" placeholder="Example: main hall, football area, registration desk" required>
+
+    <label for="personConcerned">Person Concerned</label>
+    <input type="text" id="personConcerned" name="personConcerned" placeholder="Name if known">
+
+    <label for="description">What happened?</label>
+    <textarea id="description" name="description" rows="7" placeholder="Please record facts only. What did you see or hear?" required></textarea>
+
+    <label for="immediateRisk">Is anyone in immediate danger?</label>
+    <select id="immediateRisk" name="immediateRisk" required>
+      <option value="">Select answer</option>
+      <option value="Yes">Yes</option>
+      <option value="No">No</option>
+      <option value="Not Sure">Not Sure</option>
+    </select>
+
+    <div id="successMessage" class="success-message" style="display:none;">
+        Concern submitted successfully.
+    </div>
+    <button id="submitConcernBtn" type="submit" class="submit-btn">Submit Concern</button>
+
+    <p class="form-note">
+      This form will be sent to the Event Safeguarding Lead. If there is immediate danger, call 999 first.
+    </p>
+
+  </form>
+
+  <footer class="portal-footer">
+    <p><a href="index.html">Back to Safeguarding Portal</a></p>
+    <p>Managed by TrustMark 27001</p>
+  </footer>
+
+</main>
+
+</body>
+</html>
