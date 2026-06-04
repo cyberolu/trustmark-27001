@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Request Admin Access | NDTC 2026</title>
+  <link rel="stylesheet" href="../../../shared/css/safeguarding.css">
+</head>
+
+<body>
+
+<main class="qr-portal">
+
+  <section class="qr-hero">
+    <p class="portal-label">TrustMark 27001 Safeguarding Admin</p>
+    <h1>Request Admin Access</h1>
+    <p>Create an account and request approval to access the safeguarding dashboard.</p>
+  </section>
+
+  <form id="registerForm" class="safeguarding-form">
+
+    <label for="fullName">Full Name</label>
+    <input type="text" id="fullName" required>
+
+    <label for="email">Email Address</label>
+    <input type="email" id="email" required>
+
+    <label for="organisation">Organisation / Role at Event</label>
+<select id="organisation" required>
+  <option value="">Select option</option>
+  <option value="TrustMark 27001">TrustMark 27001</option>
+  <option value="NDTC Organising Committee">NDTC Organising Committee</option>
+  <option value="Safeguarding Team">Safeguarding Team</option>
+  <option value="Deputy Safeguarding Team">Deputy Safeguarding Team</option>
+  <option value="Volunteer">Volunteer</option>
+  <option value="Coach">Coach</option>
+  <option value="Medical Team">Medical Team</option>
+  <option value="Media Team">Media Team</option>
+  <option value="Event Operations">Event Operations</option>
+  <option value="Other">Other</option>
+</select>
+
+<label for="requestedRole">Requested Access Role</label>
+<select id="requestedRole" required>
+  <option value="">Select role</option>
+  <option value="safeguarding_lead">Safeguarding Lead</option>
+  <option value="deputy_safeguarding_lead">Deputy Safeguarding Lead</option>
+  <option value="organiser">Organiser</option>
+  <option value="volunteer">Volunteer</option>
+</select>
+
+    <label for="password">Create Password</label>
+    <input type="password" id="password" required minlength="6">
+
+    <label for="confirmPassword">Confirm Password</label>
+    <input type="password" id="confirmPassword" required minlength="6">
+
+    <button type="submit" class="submit-btn">
+      Create Account & Request Access
+    </button>
+
+    <p id="registerMessage" class="form-note"></p>
+
+  </form>
+
+  <footer class="portal-footer">
+    <p><a href="login.html">Back to Login</a></p>
+    <p>Managed by TrustMark 27001</p>
+  </footer>
+
+</main>
+
+<script type="module" src="../../../shared/js/admin-register.js"></script>
+
+</body>
+</html>

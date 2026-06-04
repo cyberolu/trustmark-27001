@@ -17,7 +17,7 @@ if (loginForm) {
     e.preventDefault();
 
     const email =
-      document.getElementById("email").value.trim();
+      document.getElementById("email").value.trim().toLowerCase();
 
     const password =
       document.getElementById("password").value;
@@ -36,8 +36,37 @@ if (loginForm) {
 
       console.error(error);
 
-      loginMessage.textContent =
-        "Login failed.";
+      if (error.code === "auth/user-not-found") {
+
+        loginMessage.textContent =
+          "No account found for this email address.";
+      
+      } else if (error.code === "auth/wrong-password") {
+      
+        loginMessage.textContent =
+          "Incorrect password.";
+      
+      } else if (error.code === "auth/invalid-credential") {
+      
+        loginMessage.textContent =
+          "Incorrect email or password.";
+      
+      } else if (error.code === "auth/invalid-email") {
+      
+        loginMessage.textContent =
+          "Invalid email address.";
+      
+      } else if (error.code === "auth/too-many-requests") {
+      
+        loginMessage.textContent =
+          "Too many login attempts. Please try again later.";
+      
+      } else {
+      
+        loginMessage.textContent =
+          "Login failed. Please try again.";
+      
+      }
 
     }
 
@@ -66,8 +95,22 @@ if (googleBtn) {
 
       console.error(error);
 
-      loginMessage.textContent =
-        "Google login failed.";
+      if (error.code === "auth/popup-closed-by-user") {
+
+        loginMessage.textContent =
+          "Google sign in was cancelled.";
+      
+      } else if (error.code === "auth/popup-blocked") {
+      
+        loginMessage.textContent =
+          "Your browser blocked the Google sign in popup.";
+      
+      } else {
+      
+        loginMessage.textContent =
+          "Google sign in failed. Please try again.";
+      
+      }
 
     }
 

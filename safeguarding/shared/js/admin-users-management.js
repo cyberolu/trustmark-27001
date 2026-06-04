@@ -135,6 +135,13 @@ async function loadPendingRequests() {
         </button>
 
         <button
+          class="approve-user"
+          data-email="${data.email}"
+          data-role="volunteer">
+          Approve Volunteer
+        </button>
+        
+        <button
           class="reject-user"
           data-email="${data.email}">
           Reject
@@ -198,8 +205,10 @@ document.addEventListener("click", async (e) => {
     await setDoc(
       doc(db, "admin_users", email),
       {
-        name: email,
+        name: data.name || email,
         email,
+        organisation: data.organisation || "Not provided",
+        requestedRole: data.requestedRole || "Not provided",
         role,
         active: true,
         createdBy: currentEmail,

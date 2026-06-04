@@ -52,13 +52,16 @@ if (userInfo) {
 async function loadDashboardCounts() {
 
   const openConcerns =
-    await getCount("safeguarding_concerns", "Open");
+    (await getCount("safeguarding_concerns", "Open")) +
+    (await getCount("safeguarding_concerns", "In Progress"));
 
   const openIncidents =
-    await getCount("incident_reports", "Open");
+    (await getCount("incident_reports", "Open")) +
+    (await getCount("incident_reports", "In Progress"));
 
   const openMissing =
-    await getCount("missing_child_alerts", "Open");
+    (await getCount("missing_child_alerts", "Open")) +
+    (await getCount("missing_child_alerts", "In Progress"));
 
   const closedConcerns =
     await getCount("safeguarding_concerns", "Closed");
