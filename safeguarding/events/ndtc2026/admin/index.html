@@ -14,9 +14,14 @@
   <section class="qr-hero">
     <p class="portal-label">TrustMark 27001 Safeguarding Admin</p>
     <h1>NDTC 2026 Safeguarding Dashboard</h1>
+    <div id="adminUserInfo" class="admin-user-info"></div>
     <p>Restricted dashboard for authorised safeguarding personnel only.</p>
   </section>
-
+  <p>
+    <button id="logoutBtn" class="submit-btn" type="button">
+      Logout
+    </button>
+  </p>
   <section class="critical-banner">
     <h2>Restricted Access</h2>
     <p>This area is for the Event Safeguarding Lead, deputy safeguarding lead and authorised event management only.</p>
@@ -48,20 +53,25 @@
 
   <section class="event-info">
     <h2>Safeguarding Records</h2>
+  
+    <a href="users.html" class="document-card">
+      <h3>👥 User Management</h3>
+      <p>Add safeguarding leads, deputies and organisers.</p>
+    </a>
 
     <div class="admin-links">
 
-      <a href="#" class="document-card">
+      <a href="concerns.html" class="document-card">
         <h3>🟡 Safeguarding Concerns</h3>
         <p>View and manage safeguarding concern reports.</p>
       </a>
 
-      <a href="#" class="document-card">
+      <a href="incidents.html" class="document-card">
         <h3>🔴 Incident Reports</h3>
         <p>View and manage event incident reports.</p>
       </a>
 
-      <a href="#" class="document-card">
+      <a href="missing-children.html" class="document-card">
         <h3>🚨 Missing Child Alerts</h3>
         <p>View missing child alerts and response logs.</p>
       </a>
@@ -75,10 +85,17 @@
   </section>
 
   <section class="event-info">
+    <h2>Recent Reports</h2>
+    <div id="recentReports" class="recent-reports">
+      <p>Loading reports...</p>
+    </div>
+  </section>
+
+  <section class="event-info">
     <h2>System Status</h2>
     <p><strong>Event ID:</strong> ndtc2026</p>
-    <p><strong>Status:</strong> Local dashboard draft</p>
-    <p><strong>Database:</strong> Not connected yet</p>
+    <p><strong>Status:</strong> Dashboard connected</p>
+    <p><strong>Database:</strong> Firestore active</p>
   </section>
 
   <footer class="portal-footer">
@@ -88,5 +105,8 @@
 
 </main>
 
+<script type="module" src="../../../shared/js/admin-auth.js"></script>
+<script type="module" src="../../../shared/js/dashboard.js"></script>
+<script type="module" src="../../../shared/js/admin-logout.js"></script>
 </body>
 </html>

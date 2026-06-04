@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Missing Child Alerts | NDTC 2026</title>
+  <link rel="stylesheet" href="../../../shared/css/safeguarding.css">
+</head>
+
+<body>
+
+<main class="qr-portal">
+
+  <section class="missing-hero">
+    <p class="portal-label">TrustMark 27001 Safeguarding Admin</p>
+    <h1>Missing Child Alerts</h1>
+    <p>View missing child alerts submitted for the NDTC 2026 event.</p>
+  </section>
+  <p>
+    <button id="logoutBtn" class="submit-btn" type="button">
+      Logout
+    </button>
+  </p>
+  <section class="critical-banner">
+    <h2>Critical Safeguarding Records</h2>
+    <p>Missing child alerts must be treated as urgent and checked immediately.</p>
+  </section>
+
+  <section class="event-info">
+    <h2>Missing Child Alert Records</h2>
+
+    <div id="missingChildrenList" class="recent-reports">
+      <p>Loading alerts...</p>
+    </div>
+  </section>
+
+  <footer class="portal-footer">
+    <p><a href="index.html">Back to Dashboard</a></p>
+    <p>Managed by TrustMark 27001</p>
+  </footer>
+
+</main>
+
+<script type="module" src="../../../shared/js/admin-auth.js"></script>
+<script type="module" src="../../../shared/js/admin-missing-children.js"></script>
+<script type="module" src="../../../shared/js/admin-logout.js"></script>
+</body>
+</html>

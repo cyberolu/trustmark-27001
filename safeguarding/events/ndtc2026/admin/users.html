@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Management | NDTC 2026</title>
+  <link rel="stylesheet" href="../../../shared/css/safeguarding.css">
+</head>
+
+<body>
+
+<main class="qr-portal">
+
+  <section class="qr-hero">
+    <p class="portal-label">TrustMark 27001 Safeguarding Admin</p>
+    <h1>User Management</h1>
+    <div id="adminUserInfo" class="admin-user-info"></div>
+    <p>Super Admin area for adding safeguarding team members and event organisers.</p>
+  </section>
+
+  <section class="event-info">
+    <h2>Add Admin User</h2>
+
+    <form id="addAdminUserForm" class="safeguarding-form">
+
+      <label for="adminName">Full Name</label>
+      <input type="text" id="adminName" required>
+
+      <label for="adminEmail">Email Address</label>
+      <input type="email" id="adminEmail" required>
+
+      <label for="adminRole">Role</label>
+      <select id="adminRole" required>
+        <option value="">Select role</option>
+        <option value="safeguarding_lead">Safeguarding Lead</option>
+        <option value="deputy_safeguarding_lead">Deputy Safeguarding Lead</option>
+        <option value="organiser">Organiser</option>
+      </select>
+
+      <button type="submit" class="submit-btn">Add User</button>
+
+      <p id="userMessage" class="form-note"></p>
+
+    </form>
+  </section>
+
+  <section class="event-info">
+    <h2>Pending Access Requests</h2>
+  
+    <div id="pendingRequestsList" class="recent-reports">
+      <p>Loading requests...</p>
+    </div>
+  </section>
+  
+  <section class="event-info">
+    <h2>Approved Admin Users</h2>
+
+    <div id="adminUsersList" class="recent-reports">
+      <p>Loading users...</p>
+    </div>
+  </section>
+
+  <footer class="portal-footer">
+    <p><a href="index.html">Back to Dashboard</a></p>
+    <p>Managed by TrustMark 27001</p>
+  </footer>
+
+</main>
+
+<script type="module" src="../../../shared/js/admin-auth.js"></script>
+<script type="module" src="../../../shared/js/admin-users-management.js"></script>
+<script type="module" src="../../../shared/js/admin-logout.js"></script>
+
+</body>
+</html>

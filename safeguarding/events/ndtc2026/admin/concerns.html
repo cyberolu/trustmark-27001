@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Safeguarding Concerns | NDTC 2026</title>
+  <link rel="stylesheet" href="../../../shared/css/safeguarding.css">
+</head>
+
+<body>
+
+<main class="qr-portal">
+
+  <section class="qr-hero">
+    <p class="portal-label">TrustMark 27001 Safeguarding Admin</p>
+    <h1>Safeguarding Concerns</h1>
+    <p>View safeguarding concerns submitted for the NDTC 2026 event.</p>
+  </section>
+  <p>
+    <button id="logoutBtn" class="submit-btn" type="button">
+      Logout
+    </button>
+  </p>
+  <section class="event-info">
+    <h2>Concern Reports</h2>
+
+    <div id="concernsList" class="recent-reports">
+      <p>Loading concerns...</p>
+    </div>
+  </section>
+
+  <footer class="portal-footer">
+    <p><a href="index.html">Back to Dashboard</a></p>
+    <p>Managed by TrustMark 27001</p>
+  </footer>
+
+</main>
+
+<script type="module" src="../../../shared/js/admin-auth.js"></script>
+<script type="module" src="../../../shared/js/admin-concerns.js"></script>
+<script type="module" src="../../../shared/js/admin-logout.js"></script>
+</body>
+</html>

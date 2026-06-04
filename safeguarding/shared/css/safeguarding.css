@@ -423,3 +423,81 @@
       grid-template-columns: repeat(2, 1fr);
     }
   }
+  .recent-reports {
+    display: grid;
+    gap: 12px;
+  }
+  
+  .report-row {
+    background: var(--green-light);
+    border-left: 6px solid var(--green-main);
+    padding: 14px;
+    border-radius: 12px;
+  }
+  
+  .report-row p {
+    margin: 6px 0;
+  }
+  
+  .report-row small {
+    color: var(--muted);
+  }
+  .closed-case {
+    opacity: 0.75;
+    background: #f3f4f6;
+    border-left-color: #6b7280;
+  }
+  
+  .closed-summary {
+    margin-top: 12px;
+    padding: 12px;
+    background: #ffffff;
+    border-left: 5px solid #6b7280;
+    border-radius: 10px;
+  }
+  .admin-actions {
+    margin: 15px 0;
+  }
+  
+  .admin-actions .submit-btn {
+    width: auto;
+    min-width: 120px;
+  }
+  .admin-actions {
+    margin: 15px 0;
+  }
+  
+  .admin-actions .submit-btn {
+    width: auto;
+    min-width: 120px;
+  }
+  #adminLoginForm {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  #adminLoginForm label {
+    display: block;
+    font-weight: 600;
+    margin-top: 10px;
+  }
+  
+  #adminLoginForm input {
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .login-card {
+    max-width: 600px;
+    margin: auto;
+  }
+  .admin-user-info {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 18px;
+    background: rgba(255,255,255,0.15);
+    color: white;
+    border: 1px solid rgba(255,255,255,0.3);
+    border-radius: 30px;
+    font-weight: 600;
+  }
