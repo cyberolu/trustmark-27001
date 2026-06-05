@@ -134,6 +134,13 @@ async function loadPendingRequests() {
         <button
           class="approve-user"
           data-email="${data.email}"
+          data-role="safeguarding_team">
+          Approve Safeguarding Team
+        </button>
+
+        <button
+          class="approve-user"
+          data-email="${data.email}"
           data-role="organiser">
           Approve Organiser
         </button>

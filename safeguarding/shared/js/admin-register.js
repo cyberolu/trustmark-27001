@@ -46,14 +46,20 @@ if (registerForm) {
         { merge: true }
       );
 
+      registerMessage.style.color = "green";
+
       registerMessage.textContent =
-        "Account created. Your access request is pending Super Admin approval.";
+        "Thank you for registering. Your account has been created successfully and your access request has been submitted for approval. A Super Admin must approve your account before you can access the safeguarding dashboard.";
+
+      alert(
+        "Registration successful. Your account is awaiting approval from a Super Admin. You will be able to access the safeguarding dashboard once your request has been approved."
+      );
 
       await signOut(auth);
 
       setTimeout(() => {
         window.location.href = "login.html";
-      }, 2500);
+      },5000);
 
     } catch (error) {
       console.error("Registration error:", error);

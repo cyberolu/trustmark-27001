@@ -34,17 +34,32 @@ async function getCount(collectionName, status = null) {
   return snapshot.size;
 }
 
-const userInfo =
-  document.getElementById("adminUserInfo");
+function showAdminUserInfo() {
+  const userInfo =
+    document.getElementById("adminUserInfo");
 
-if (userInfo) {
+  if (!userInfo) return;
+
+  const adminName =
+    localStorage.getItem("adminName");
+
+  const adminRole =
+    localStorage.getItem("adminRole");
+
+  if (!adminName || !adminRole) {
+    userInfo.innerHTML =
+      "Checking authorised user...";
+    return;
+  }
 
   userInfo.innerHTML = `
     Logged in as:
-    <strong>${localStorage.getItem("adminName")}</strong>
-    (${localStorage.getItem("adminRole")})
+    <strong>${adminName}</strong>
+    (${adminRole})
   `;
 }
+
+setTimeout(showAdminUserInfo, 800);
 /* =========================
    DASHBOARD COUNTS
 ========================= */

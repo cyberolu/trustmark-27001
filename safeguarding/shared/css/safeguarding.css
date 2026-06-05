@@ -501,3 +501,24 @@
     border-radius: 30px;
     font-weight: 600;
   }
+  .table-wrapper {
+    overflow-x: auto;
+  }
+  
+  .risk-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .risk-table th,
+  .risk-table td {
+    padding: 12px;
+    border: 1px solid #d8e6dc;
+    text-align: left;
+    vertical-align: top;
+  }
+  
+  .risk-table th {
+    background: #007a3d;
+    color: #ffffff;
+  }

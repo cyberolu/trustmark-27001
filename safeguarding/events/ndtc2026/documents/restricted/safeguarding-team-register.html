@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Safeguarding Team Register | NDTC 2026</title>
+  <link rel="stylesheet" href="../../../../shared/css/safeguarding.css">
+</head>
+
+<body>
+
+<main class="qr-portal">
+
+  <section class="missing-hero">
+    <p class="portal-label">TrustMark 27001 Restricted Area</p>
+    <h1>Safeguarding Team Register</h1>
+    <p>
+      Internal register of approved safeguarding personnel, training status, checks and event responsibilities.
+    </p>
+  </section>
+
+  <section class="critical-banner">
+    <h2>Restricted Record</h2>
+    <p>
+      This register contains sensitive staff and safeguarding information. Access is limited to authorised safeguarding leaders only.
+    </p>
+  </section>
+
+  <section class="event-info">
+    <h2>Add Safeguarding Team Member</h2>
+
+    <form id="safeguardingTeamForm" class="safeguarding-form">
+
+      <label for="memberName">Full Name</label>
+      <input type="text" id="memberName" required>
+
+      <label for="memberEmail">Email Address</label>
+      <input type="email" id="memberEmail" required>
+
+      <label for="memberPhone">Mobile Number</label>
+      <input type="tel" id="memberPhone" required>
+
+      <label for="memberOrganisation">Organisation</label>
+      <input type="text" id="memberOrganisation" value="TrustMark 27001" required>
+
+      <label for="memberRole">Safeguarding Role</label>
+      <select id="memberRole" required>
+        <option value="">Select role</option>
+        <option value="Safeguarding Lead">Safeguarding Lead</option>
+        <option value="Deputy Safeguarding Lead">Deputy Safeguarding Lead</option>
+        <option value="Safeguarding Team Member">Safeguarding Team Member</option>
+        <option value="Welfare Support">Welfare Support</option>
+      </select>
+
+      <label for="trainingCompleted">Safeguarding Training Completed</label>
+      <select id="trainingCompleted" required>
+        <option value="">Select option</option>
+        <option value="Yes">Yes</option>
+        <option value="Pending">Pending</option>
+        <option value="No">No</option>
+      </select>
+
+      <label for="trainingProvider">Training Provider</label>
+      <input type="text" id="trainingProvider" placeholder="Example: FA, UK Athletics, NSPCC, Internal">
+
+      <label for="trainingExpiry">Training Expiry Date</label>
+      <input type="date" id="trainingExpiry">
+
+      <label for="dbsChecked">DBS / Background Check Status</label>
+      <select id="dbsChecked" required>
+        <option value="">Select option</option>
+        <option value="Completed">Completed</option>
+        <option value="Pending">Pending</option>
+        <option value="Not Required">Not Required</option>
+        <option value="Not Completed">Not Completed</option>
+      </select>
+
+      <label for="dbsExpiry">DBS Expiry Date</label>
+      <input type="date" id="dbsExpiry">
+
+      <label for="firstAidTrained">First Aid Trained</label>
+      <select id="firstAidTrained" required>
+        <option value="">Select option</option>
+        <option value="Yes">Yes</option>
+        <option value="No">No</option>
+        <option value="Unknown">Unknown</option>
+      </select>
+
+      <label for="eventResponsibilities">Event Responsibilities</label>
+      <textarea
+        id="eventResponsibilities"
+        rows="4"
+        placeholder="Example: Welfare desk, missing child response, incident support, safeguarding escalation"
+        required></textarea>
+
+      <label for="memberNotes">Notes</label>
+      <textarea
+        id="memberNotes"
+        rows="3"
+        placeholder="Optional notes"></textarea>
+
+      <button type="submit" class="submit-btn">
+        Add Team Member
+      </button>
+
+      <p id="teamRegisterMessage" class="form-note"></p>
+
+    </form>
+  </section>
+
+  <section class="event-info">
+    <h2>Registered Safeguarding Team</h2>
+
+    <div id="safeguardingTeamList" class="recent-reports">
+      <p>Loading safeguarding team register...</p>
+    </div>
+  </section>
+
+  <section class="event-info">
+    <h2>Access Notice</h2>
+    <p>
+      This register should only be viewed or updated by the Super Admin, Safeguarding Lead or Deputy Safeguarding Lead.
+    </p>
+  </section>
+
+  <footer class="portal-footer">
+    <p><a href="index.html">Back to Restricted Area</a></p>
+    <p><a href="../../admin/index.html">Back to Admin Dashboard</a></p>
+    <p>Managed by TrustMark 27001</p>
+  </footer>
+
+</main>
+
+<script type="module" src="../../../../shared/js/restricted-auth.js"></script>
+<script type="module" src="../../../../shared/js/safeguarding-team-register.js"></script>
+
+</body>
+</html>

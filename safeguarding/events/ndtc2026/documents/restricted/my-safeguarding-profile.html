@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Safeguarding Profile | NDTC 2026</title>
+  <link rel="stylesheet" href="../../../../shared/css/safeguarding.css">
+</head>
+
+<body>
+
+<main class="qr-portal">
+
+  <section class="missing-hero">
+    <p class="portal-label">TrustMark 27001 Restricted Area</p>
+    <h1>My Safeguarding Profile</h1>
+    <p>
+      Complete your safeguarding team profile for NDTC 2026.
+      This helps confirm training, checks and event responsibilities.
+    </p>
+  </section>
+
+  <section class="critical-banner">
+    <h2>Restricted Information</h2>
+    <p>
+      This form is for approved safeguarding personnel only.
+      Information submitted here will be visible to the Safeguarding Lead, Deputy Safeguarding Lead and Super Admin.
+    </p>
+  </section>
+
+  <section class="event-info">
+    <h2>Profile Details</h2>
+
+    <form id="mySafeguardingProfileForm" class="safeguarding-form">
+
+      <label for="profileName">Full Name</label>
+      <input type="text" id="profileName" required>
+
+      <label for="profileEmail">Email Address</label>
+      <input type="email" id="profileEmail" readonly>
+
+      <label for="profilePhone">Mobile Number</label>
+      <input type="tel" id="profilePhone" required>
+
+      <label for="profileOrganisation">Organisation</label>
+      <select id="profileOrganisation" required>
+        <option value="">Select option</option>
+        <option value="TrustMark 27001">TrustMark 27001</option>
+        <option value="NDTC Organising Committee">NDTC Organising Committee</option>
+        <option value="Safeguarding Team">Safeguarding Team</option>
+        <option value="Other">Other</option>
+      </select>
+
+      <label for="profileSafeguardingRole">Safeguarding Role</label>
+      <select id="profileSafeguardingRole" required>
+        <option value="">Select role</option>
+        <option value="Safeguarding Lead">Safeguarding Lead</option>
+        <option value="Deputy Safeguarding Lead">Deputy Safeguarding Lead</option>
+        <option value="Safeguarding Team Member">Safeguarding Team Member</option>
+        <option value="Welfare Support">Welfare Support</option>
+      </select>
+
+      <label for="profileTrainingCompleted">Safeguarding Training Completed</label>
+      <select id="profileTrainingCompleted" required>
+        <option value="">Select option</option>
+        <option value="Yes">Yes</option>
+        <option value="Pending">Pending</option>
+        <option value="No">No</option>
+      </select>
+
+      <label for="profileTrainingProvider">Safeguarding Training Provider</label>
+      <input type="text" id="profileTrainingProvider" placeholder="Example: FA Safeguarding, UK Athletics, NSPCC, Internal">
+
+      <label for="profileTrainingExpiry">Training Expiry Date</label>
+      <input type="date" id="profileTrainingExpiry">
+
+      <label for="profileOuSafeguardingCompleted">Open University Safeguarding Essentials Completed</label>
+      <select id="profileOuSafeguardingCompleted" required>
+        <option value="">Select option</option>
+        <option value="Yes">Yes</option>
+        <option value="In Progress">In Progress</option>
+        <option value="No">No</option>
+        <option value="Not Required">Not Required</option>
+      </select>
+
+      <label for="profileOuSafeguardingDate">Open University Course Completion Date</label>
+      <input type="date" id="profileOuSafeguardingDate">
+
+      <label for="profileOuSafeguardingBadge">Digital Badge Verified</label>
+      <select id="profileOuSafeguardingBadge" required>
+        <option value="">Select option</option>
+        <option value="Yes">Yes</option>
+        <option value="Pending">Pending</option>
+        <option value="No">No</option>
+        <option value="Not Required">Not Required</option>
+      </select>
+
+      <label for="profileDbsStatus">DBS / Background Check Status</label>
+      <select id="profileDbsStatus" required>
+        <option value="">Select option</option>
+        <option value="Completed">Completed</option>
+        <option value="Pending">Pending</option>
+        <option value="Not Required">Not Required</option>
+        <option value="Not Completed">Not Completed</option>
+      </select>
+
+      <label for="profileDbsExpiry">DBS Expiry Date</label>
+      <input type="date" id="profileDbsExpiry">
+
+      <label for="profileFirstAid">First Aid Trained</label>
+      <select id="profileFirstAid" required>
+        <option value="">Select option</option>
+        <option value="Yes">Yes</option>
+        <option value="No">No</option>
+        <option value="Unknown">Unknown</option>
+      </select>
+
+      <label for="profileAvailability">Event Days Available</label>
+      <textarea id="profileAvailability" rows="3" required></textarea>
+
+      <label for="profileResponsibilities">Event Responsibilities</label>
+      <textarea id="profileResponsibilities" rows="4" required></textarea>
+
+      <label for="profileNotes">Additional Notes</label>
+      <textarea id="profileNotes" rows="3"></textarea>
+
+      <button type="submit" class="submit-btn">
+        Save My Safeguarding Profile
+      </button>
+
+      <p id="profileMessage" class="form-note"></p>
+
+    </form>
+  </section>
+
+  <section class="event-info">
+    <h2>Profile Status</h2>
+    <p id="profileStatus">Your profile status will appear here after submission.</p>
+  </section>
+
+  <footer class="portal-footer">
+    <p><a href="index.html">Back to Restricted Area</a></p>
+    <p><a href="../../admin/index.html">Back to Admin Dashboard</a></p>
+    <p>Managed by TrustMark 27001</p>
+  </footer>
+
+</main>
+
+<script type="module" src="../../../../shared/js/restricted-auth.js"></script>
+<script type="module" src="../../../../shared/js/my-safeguarding-profile.js"></script>
+
+</body>
+</html>

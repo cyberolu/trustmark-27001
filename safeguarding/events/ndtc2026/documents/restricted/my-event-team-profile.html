@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Event Team Profile | NDTC 2026</title>
+  <link rel="stylesheet" href="../../../../shared/css/safeguarding.css">
+</head>
+
+<body>
+
+<main class="qr-portal">
+
+  <section class="missing-hero">
+    <p class="portal-label">TrustMark 27001 Restricted Area</p>
+    <h1>My Event Team Profile</h1>
+    <p>
+      Complete your event team profile for NDTC 2026.
+    </p>
+  </section>
+
+  <section class="critical-banner">
+    <h2>Restricted Information</h2>
+    <p>
+      This profile is for approved event personnel only.
+      Information will be used for event planning, safeguarding coordination and emergency response.
+    </p>
+  </section>
+
+  <section class="event-info">
+
+    <h2>Profile Details</h2>
+
+    <form id="myEventTeamProfileForm" class="safeguarding-form">
+
+      <label for="eventName">Full Name</label>
+      <input type="text" id="eventName" required>
+
+      <label for="eventEmail">Email Address</label>
+      <input type="email" id="eventEmail" readonly>
+
+      <label for="eventPhone">Mobile Number</label>
+      <input type="tel" id="eventPhone" required>
+
+      <label for="eventOrganisation">Organisation</label>
+      <select id="eventOrganisation" required>
+        <option value="">Select option</option>
+        <option value="TrustMark 27001">TrustMark 27001</option>
+        <option value="NDTC Organising Committee">NDTC Organising Committee</option>
+        <option value="Volunteer">Volunteer</option>
+        <option value="Medical Team">Medical Team</option>
+        <option value="Media Team">Media Team</option>
+        <option value="Event Operations">Event Operations</option>
+        <option value="Coach">Coach</option>
+        <option value="Other">Other</option>
+      </select>
+
+      <label for="eventRole">Role at Event</label>
+      <select id="eventRole" required>
+        <option value="">Select role</option>
+        <option value="Event Organiser">Event Organiser</option>
+        <option value="Volunteer">Volunteer</option>
+        <option value="Coach">Coach</option>
+        <option value="Medical Team">Medical Team</option>
+        <option value="Media Team">Media Team</option>
+        <option value="Event Operations">Event Operations</option>
+        <option value="Safeguarding Support">Safeguarding Support</option>
+        <option value="Other">Other</option>
+      </select>
+
+      <label for="eventDays">Event Days Available</label>
+      <textarea
+        id="eventDays"
+        rows="3"
+        placeholder="Example: Friday setup, Saturday full day, Sunday morning"
+        required></textarea>
+
+      <label for="eventResponsibilities">Event Responsibilities</label>
+      <textarea
+        id="eventResponsibilities"
+        rows="4"
+        placeholder="Describe your role and responsibilities"
+        required></textarea>
+
+      <label for="eventSafeguardingBriefing">Safeguarding Briefing Completed</label>
+      <select id="eventSafeguardingBriefing" required>
+        <option value="">Select option</option>
+        <option value="Yes">Yes</option>
+        <option value="Pending">Pending</option>
+        <option value="No">No</option>
+      </select>
+
+      <label for="eventOuSafeguardingCompleted">
+        Open University Safeguarding Essentials Completed
+      </label>
+
+      <select id="eventOuSafeguardingCompleted" required>
+        <option value="">Select option</option>
+        <option value="Yes">Yes</option>
+        <option value="In Progress">In Progress</option>
+        <option value="No">No</option>
+        <option value="Not Required">Not Required</option>
+      </select>
+
+      <label for="eventOuSafeguardingDate">
+        Open University Course Completion Date
+      </label>
+
+      <input
+        type="date"
+        id="eventOuSafeguardingDate">
+
+      <label for="eventOuSafeguardingBadge">
+        Digital Badge Verified
+      </label>
+
+      <select id="eventOuSafeguardingBadge" required>
+        <option value="">Select option</option>
+        <option value="Yes">Yes</option>
+        <option value="Pending">Pending</option>
+        <option value="No">No</option>
+        <option value="Not Required">Not Required</option>
+      </select>
+
+      <label for="eventEmergencyContact">
+        Emergency Contact Available
+      </label>
+
+      <select id="eventEmergencyContact" required>
+        <option value="">Select option</option>
+        <option value="Yes">Yes</option>
+        <option value="No">No</option>
+      </select>
+
+      <label for="eventNotes">
+        Additional Notes
+      </label>
+
+      <textarea
+        id="eventNotes"
+        rows="3"
+        placeholder="Optional notes"></textarea>
+
+      <button
+        type="submit"
+        class="submit-btn">
+        Save My Event Team Profile
+      </button>
+
+      <p id="eventProfileMessage" class="form-note"></p>
+
+    </form>
+
+  </section>
+
+  <section class="event-info">
+
+    <h2>Profile Status</h2>
+
+    <p id="eventProfileStatus">
+      Your profile status will appear here after submission.
+    </p>
+
+  </section>
+
+  <footer class="portal-footer">
+    <p><a href="index.html">Back to Restricted Area</a></p>
+    <p><a href="../../admin/index.html">Back to Admin Dashboard</a></p>
+    <p>Managed by TrustMark 27001</p>
+  </footer>
+
+</main>
+
+<script type="module" src="../../../../shared/js/restricted-auth.js"></script>
+<script type="module" src="../../../../shared/js/my-event-team-profile.js"></script>
+
+</body>
+</html>
