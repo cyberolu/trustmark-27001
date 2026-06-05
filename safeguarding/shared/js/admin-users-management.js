@@ -3,6 +3,7 @@ import {
   collection,
   doc,
   setDoc,
+  getDoc,
   getDocs,
   query,
   orderBy,
@@ -63,8 +64,9 @@ async function loadUsers() {
       <strong>👤 ${data.name || "Unnamed User"}</strong>
 
       <p><strong>Email:</strong> ${data.email || documentSnapshot.id}</p>
-
-      <p><strong>Role:</strong> ${data.role || "Not set"}</p>
+      <p><strong>Organisation:</strong> ${data.organisation || "Not provided"}</p>
+      <p><strong>Requested Role:</strong> ${data.requestedRole || "Not provided"}</p>
+      <p><strong>Approved Role:</strong> ${data.role || "Not set"}</p>
 
       <p><strong>Status:</strong> ${
         data.active ? "Active" : "Disabled"
@@ -110,6 +112,8 @@ async function loadPendingRequests() {
       <strong>🟡 ${data.name || "Unknown User"}</strong>
 
       <p><strong>Email:</strong> ${data.email}</p>
+      <p><strong>Organisation:</strong> ${data.organisation || "Not provided"}</p>
+      <p><strong>Requested Role:</strong> ${data.requestedRole || "Not provided"}</p>
 
       <div class="status-actions">
 
@@ -140,7 +144,7 @@ async function loadPendingRequests() {
           data-role="volunteer">
           Approve Volunteer
         </button>
-        
+
         <button
           class="reject-user"
           data-email="${data.email}">
@@ -181,6 +185,8 @@ if (form) {
       name,
       email,
       role,
+      organisation: "Manually added",
+      requestedRole: "Manually added",
       active: true,
       createdBy: currentEmail || "unknown",
       createdAt: serverTimestamp()
@@ -196,30 +202,44 @@ if (form) {
 }
 
 document.addEventListener("click", async (e) => {
-
   if (e.target.matches(".approve-user")) {
+    if (!requireSuperAdmin()) return;
 
     const email = e.target.dataset.email;
     const role = e.target.dataset.role;
 
+    const requestRef = doc(
+      db,
+      "pending_admin_requests",
+      email
+    );
+
+    const requestDoc = await getDoc(requestRef);
+
+    if (!requestDoc.exists()) {
+      alert("This request no longer exists.");
+      await loadPendingRequests();
+      return;
+    }
+
+    const requestData = requestDoc.data();
+
     await setDoc(
       doc(db, "admin_users", email),
       {
-        name: data.name || email,
+        name: requestData.name || email,
         email,
-        organisation: data.organisation || "Not provided",
-        requestedRole: data.requestedRole || "Not provided",
+        organisation: requestData.organisation || "Not provided",
+        requestedRole: requestData.requestedRole || "Not provided",
         role,
         active: true,
-        createdBy: currentEmail,
+        createdBy: currentEmail || "unknown",
         createdAt: serverTimestamp()
       },
       { merge: true }
     );
 
-    await deleteDoc(
-      doc(db, "pending_admin_requests", email)
-    );
+    await deleteDoc(requestRef);
 
     await loadPendingRequests();
     await loadUsers();
@@ -229,6 +249,7 @@ document.addEventListener("click", async (e) => {
   }
 
   if (e.target.matches(".reject-user")) {
+    if (!requireSuperAdmin()) return;
 
     const email = e.target.dataset.email;
 
